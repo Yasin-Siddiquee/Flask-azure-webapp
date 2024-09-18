@@ -111,12 +111,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        node-version: '20'  # Specify the Node.js version for this action
+        node-version: '20'
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        node-version: '20'  # Specify the Node.js version for this action
+        node-version: '20'
         python-version: '3.x'
 
     - name: Install dependencies
@@ -127,7 +127,7 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'my-flask-app'  # Replace with your Azure Web App name
+        app-name: 'my-flask-app'
         slot-name: 'production'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
 ```
